@@ -19,7 +19,7 @@ namespace Shadowsocks
 
         /// <summary>
         /// 应用程序的主入口点。
-        /// </summary>
+        /// </summary>  
         [STAThread]
         static void Main()
         {
@@ -71,7 +71,7 @@ namespace Shadowsocks
                 Directory.SetCurrentDirectory(Application.StartupPath);
 #if DEBUG
                 Logging.OpenLogFile();
-
+                //test
                 // truncate privoxy log file while debugging
                 string privoxyLogFilename = Utils.GetTempPath("privoxy.log");
                 if (File.Exists(privoxyLogFilename))
