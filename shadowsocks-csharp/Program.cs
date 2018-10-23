@@ -71,6 +71,11 @@ namespace Shadowsocks
                 Directory.SetCurrentDirectory(Application.StartupPath);
 #if DEBUG
                 Logging.OpenLogFile();
+                LoginForm loginForm = new LoginForm();
+                if (loginForm.ShowDialog() != DialogResult.OK)
+                {
+                    return;
+                }
                 //test1
                 // truncate privoxy log file while debugging
                 string privoxyLogFilename = Utils.GetTempPath("privoxy.log");
