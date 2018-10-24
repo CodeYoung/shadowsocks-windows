@@ -34,8 +34,8 @@
             this.chkRemember = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblRegister = new System.Windows.Forms.Label();
-            this.textBoxEx2 = new Shadowsocks.View.TextBoxEx(this.components);
-            this.textBoxEx1 = new Shadowsocks.View.TextBoxEx(this.components);
+            this.txtPassWord = new Shadowsocks.View.TextBoxEx(this.components);
+            this.txtAccount = new Shadowsocks.View.TextBoxEx(this.components);
             this.SuspendLayout();
             // 
             // btnLogin
@@ -93,23 +93,23 @@
             this.lblRegister.MouseEnter += new System.EventHandler(this.lblRegister_MouseEnter);
             this.lblRegister.MouseLeave += new System.EventHandler(this.lblRegister_MouseLeave);
             // 
-            // textBoxEx2
+            // txtPassWord
             // 
-            this.textBoxEx2.EmptyTextTip = "请输入密码";
-            this.textBoxEx2.Location = new System.Drawing.Point(555, 198);
-            this.textBoxEx2.Multiline = true;
-            this.textBoxEx2.Name = "textBoxEx2";
-            this.textBoxEx2.Size = new System.Drawing.Size(194, 32);
-            this.textBoxEx2.TabIndex = 4;
+            this.txtPassWord.EmptyTextTip = "请输入密码";
+            this.txtPassWord.Location = new System.Drawing.Point(555, 198);
+            this.txtPassWord.Multiline = true;
+            this.txtPassWord.Name = "txtPassWord";
+            this.txtPassWord.Size = new System.Drawing.Size(194, 32);
+            this.txtPassWord.TabIndex = 4;
             // 
-            // textBoxEx1
+            // txtAccount
             // 
-            this.textBoxEx1.EmptyTextTip = "请输入账户或者电话号码";
-            this.textBoxEx1.Location = new System.Drawing.Point(555, 128);
-            this.textBoxEx1.Multiline = true;
-            this.textBoxEx1.Name = "textBoxEx1";
-            this.textBoxEx1.Size = new System.Drawing.Size(194, 32);
-            this.textBoxEx1.TabIndex = 3;
+            this.txtAccount.EmptyTextTip = "请输入账户或者电话号码";
+            this.txtAccount.Location = new System.Drawing.Point(555, 128);
+            this.txtAccount.Multiline = true;
+            this.txtAccount.Name = "txtAccount";
+            this.txtAccount.Size = new System.Drawing.Size(194, 32);
+            this.txtAccount.TabIndex = 3;
             // 
             // LoginForm
             // 
@@ -119,8 +119,8 @@
             this.Controls.Add(this.lblRegister);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.chkRemember);
-            this.Controls.Add(this.textBoxEx2);
-            this.Controls.Add(this.textBoxEx1);
+            this.Controls.Add(this.txtPassWord);
+            this.Controls.Add(this.txtAccount);
             this.Controls.Add(this.lblForgetPassWord);
             this.Controls.Add(this.btnLogin);
             this.Name = "LoginForm";
@@ -134,8 +134,8 @@
 
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblForgetPassWord;
-        private TextBoxEx textBoxEx1;
-        private TextBoxEx textBoxEx2;
+        private TextBoxEx txtAccount;
+        private TextBoxEx txtPassWord;
         private System.Windows.Forms.CheckBox chkRemember;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblRegister;

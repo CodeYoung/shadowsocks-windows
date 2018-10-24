@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Shadowsocks.Proxy;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -51,8 +53,23 @@ namespace Shadowsocks.View
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+            Dictionary<string, string> dictResult = new Dictionary<string, string>();
+            dict.Add("account", txtAccount.Text);
+            dict.Add("password", txtPassWord.Text);
+            string resultStr=HttpHelper.Post("http://localhost:8000/accounts/sockLogin/", dict);
+            dictResult=JsonConvert.DeserializeObject<Dictionary<string,string>>(resultStr);
+            if (dictResult["resultCode"] != "0")
+            {
+                MessageBox.Show(dictResult["msg"]);
+                //this.DialogResult = DialogResult.No;
+                return;
+                //this.Close();
+            }
+            else {
             this.DialogResult = DialogResult.OK;
             this.Close();
+            }
         }
     }
 }

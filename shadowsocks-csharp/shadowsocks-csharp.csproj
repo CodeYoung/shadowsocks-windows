@@ -128,6 +128,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Proxy\DirectConnect.cs" />
+    <Compile Include="Proxy\HttpHelper.cs" />
     <Compile Include="Proxy\HttpProxy.cs" />
     <Compile Include="Proxy\IProxy.cs" />
     <Compile Include="Controller\Service\AvailabilityStatistics.cs" />
